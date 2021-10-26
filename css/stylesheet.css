@@ -1,27 +1,24 @@
+nav {
+    float: right;
+}
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; 
     margin-left: 10%;
     margin-right: 10%;
 }
 footer, figure, blockquote {
     text-align: center;
-    padding: 2%;
-}
-nav {
-    float: right;
-    overflow: visible;
-}
-header {
-
 }
 section {
     border:rgba(0, 0, 255, 1);
     border-bottom: rgba(0, 0, 255, 1);
     border-style:dashed;
     padding: 5%;
+    background-color: #7b7b7b70;
 }
 span {
     border-style:solid;
+    border-radius: 5%;
     border-color: rgba(0, 0, 255, 1);
     background-color: rgba(1,255,0,1);
     font-size: x-large;
@@ -54,6 +51,7 @@ li {
 h1{
     background-color: rgba(0, 0, 0, .95);
     color: rgba(255,255,255,1);
+    margin-top: 10%;
 }
 figcaption {
     font-weight: bold;
@@ -64,4 +62,10 @@ p {
 }
 .purchase {
     text-align: center;
+}
+a:link, a:visited {
+    color: rgba(0, 0, 255, 1);
+}
+a:hover {
+    color:rgba(255,0,0,1);
 }
