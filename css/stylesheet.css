@@ -78,3 +78,6 @@ textarea{
     margin-right: 30%;
     width:50%;
 }
+.reply, .post {
+    float:right;
+}
