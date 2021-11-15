@@ -70,3 +70,11 @@ a:link, a:visited {
 a:hover {
     color:rgba(255,0,0,1);
 }
+/* button {
+    float: right;
+} */
+textarea{
+    margin-left: 30%;
+    margin-right: 30%;
+    width:50%;
+}
