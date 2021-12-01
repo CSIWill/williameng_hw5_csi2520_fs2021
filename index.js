@@ -46,9 +46,9 @@ app.get("/my_fun_facts", (req, res) => {
 app.get("/my_trivia", (req, res) => {
   res.render("./html/my_trivia");
 });
-app.post("/question1", (req,res) => {
+app.post("/question1/", (req,res) => {
   let userAnswer = req.body.userAnswer1
-  if (userAnswer.toUpperCase() == "d") {
+  if (userAnswer.toUpperCase() === "D") {
     res.send('Correct');  
   }
   else {
