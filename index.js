@@ -32,9 +32,20 @@ app.use("/public", express.static(__dirname + "/public"));
 
 // routes
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index.ejs");
 });
-app.get("/html/resume")
+
+app.get("/html/my_resume", (req, res) => {
+  res.render("./html/my_resume.ejs");
+});
+
+app.get("/html/my_fun_facts", (req, res) => {
+  res.render("./html/my_fun_facts");
+});
+
+app.get("/html/my_trivia", (req, res) => {
+  res.render("./html/my_trivia");
+});
 
 // app.post("/insertstudents", (req, res) => {
 //   let data = { name: req.body.studentName, email: req.body.studentEmail };
