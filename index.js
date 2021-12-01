@@ -46,6 +46,16 @@ app.get("/my_fun_facts", (req, res) => {
 app.get("/my_trivia", (req, res) => {
   res.render("./html/my_trivia");
 });
+app.post("/question1", (req,res) => {
+  let userAnswer = req.body.userAnswer1
+  if (userAnswer.toUpperCase() == "d") {
+    res.send('Correct');  
+  }
+  else {
+    res.send('Incorrect');
+  }
+  
+});
 
 // app.post("/insertstudents", (req, res) => {
 //   let data = { name: req.body.studentName, email: req.body.studentEmail };
