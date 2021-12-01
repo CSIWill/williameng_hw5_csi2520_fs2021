@@ -35,15 +35,15 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-app.get("/html/my_resume", (req, res) => {
+app.get("/my_resume", (req, res) => {
   res.render("./html/my_resume.ejs");
 });
 
-app.get("/html/my_fun_facts", (req, res) => {
+app.get("/my_fun_facts", (req, res) => {
   res.render("./html/my_fun_facts");
 });
 
-app.get("/html/my_trivia", (req, res) => {
+app.get("/my_trivia", (req, res) => {
   res.render("./html/my_trivia");
 });
 
