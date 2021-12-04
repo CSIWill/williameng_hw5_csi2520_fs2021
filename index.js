@@ -38,7 +38,7 @@ app.get('/my_trivia', (req, res) => {
 
 
 app.post('/my_trivia', (req,res) => {
-  let newAnswer1 = req.body.userAnswer;
+  let newAnswer1 = req.body.userAnswer1;
   let newAnswer2 = req.body.userAnswer2;  
   let newAnswer3 = req.body.userAnswer3;  
   let newAnswer4 = req.body.userAnswer4;  
