@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/ec123b3c6a.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../../public/media/img/gundam.png" type="image/x-icon">
     <link rel="stylesheet" href="../../public/css/stylesheet.css">
+    <script src="../../public/js/my_trivia.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,7 +22,8 @@
     </header>
     <main>
         <h1>My Trivia</h1>
-        <ol>
+        <section>
+            <ol id="quiz">
             <li>
                 <h2>If you have 5 apples in 3 buckets, how many buckets do you have </h2>
                 <form action="/my_trivia/" method="post">
@@ -31,12 +33,21 @@
                         <li>3 buckets</li>
                         <li>5 apples</li>
                     </ol>
-                    <input type="text" name="userAnswer">User 1 Types Comment Here </input>                    
-                    <button type="submit">Add/Leave A Comment</button>
+                    <label for="userAnswer">Enter Answer Here:</label>
+                    <input type="text" name="userAnswer"></input>                    
+                    <button type="submit" id="submitAnswer">Add/Leave A Comment</button>
                 </form>
                 
+                <h3>Your answer was <%= userAnswers%></h3>
+
             </li>
         </ol>
+        <div id="score">
+
+        </div>
+
+        </section>
+
     </main>
     <footer>
         <hr>

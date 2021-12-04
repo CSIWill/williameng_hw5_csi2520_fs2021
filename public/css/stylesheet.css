@@ -30,12 +30,13 @@ th {
     margin: auto;
 }
 progress, label {
-    margin-left: 45%;
-    margin-right: 45%;
-}
-label{
     text-align: center;
+    /* margin-left: 45%;
+    margin-right: 45%; */
 }
+/* label{
+    text-align: center;
+} */
 table {
     margin: auto;
     overflow: hidden;

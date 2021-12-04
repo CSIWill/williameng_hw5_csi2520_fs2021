@@ -4,8 +4,8 @@
   "description": "CSI 2520 Homework 5",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon index"
+    "start": "node index.js",
+    "dev": "node nodemon index.js"
   },
   "repository": {
     "type": "git",
