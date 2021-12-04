@@ -29,10 +29,10 @@ th {
     padding: 2%;
     margin: auto;
 }
-progress, label {
+progress, #degree {
     text-align: center;
-    /* margin-left: 45%;
-    margin-right: 45%; */
+    margin-left: 45%;
+    margin-right: 45%;
 }
 /* label{
     text-align: center;
