@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,9 @@
     <script src="https://kit.fontawesome.com/ec123b3c6a.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../../public/media/img/gundam.png" type="image/x-icon">
     <link rel="stylesheet" href="../../public/css/stylesheet.css">
-    <script src="../../public/js/my_trivia.js" defer></script>
+    <!-- <script src="../../public/js/my_trivia.js" defer></script> -->
 </head>
+
 <body>
     <header>
         <nav>
@@ -21,12 +23,14 @@
         <a name="top"></a>
     </header>
     <main>
-        <h1>My Trivia</h1>
-        <section>
-            <ol id="quiz">
-            <li>
-                <h2>If you have 5 apples in 3 buckets, how many buckets do you have </h2>
-                <form action="/my_trivia/" method="post">
+        <% var score=0;%>
+
+            <h1>My Trivia</h1>
+            <section>
+                <ol id="quiz">
+                    <!-- <li>
+                <h2>If you have 5 apples in 3 buckets, how many buckets do you have?</h2>
+                <form action="/my_trivia1/" method="post">
                     <ol>
                         <li>2 bananas</li>
                         <li>3 strawberries</li>
@@ -34,19 +38,180 @@
                         <li>5 apples</li>
                     </ol>
                     <label for="userAnswer">Enter Answer Here:</label>
-                    <input type="text" name="userAnswer"></input>                    
+                    <input type="text" name="userAnswer1"></input>                    
                     <button type="submit" id="submitAnswer">Add/Leave A Comment</button>
                 </form>
-                
-                <h3>Your answer was <%= userAnswers%></h3>
-
+                <h3>
+                    <%= `You entered ${urAnswer1}`%>
+                    <% if (urAnswer1 == 3) { %>
+                        <% score++; %>
+                        <%} %>       
+                </h3>
             </li>
-        </ol>
-        <div id="score">
+            <li>
+                <h2>What is the circumference of the Earth?</h2>
+                <form action="/my_trivia2/" method="post">
+                    <ol>
+                        <li>20,000 mi</li>
+                        <li>40,075 km</li> 
+                        <li>53,825,760 yd</li>
+                        <li>1.21477e+8 ft</li>
+                    </ol>
+                    <label for="userAnswer">Enter Answer Here:</label>
+                    <input type="text" name="userAnswer2"></input>                    
+                    <button type="submit" id="submitAnswer">Add/Leave A Comment</button>
+                </form>
+                <h3>
+                    <%= `You entered ${urAnswer2}`%>
+                    <% if (urAnswer2 == 2) { %>
+                        <% score++; %>
+                        <%} %>       
+                </h3>
+            </li>
+            <li>
+                <h2>What is the circumference of the Earth?</h2>
+                <form action="/my_trivia3/" method="post">
+                    <ol>
+                        <li>20,000 mi</li>
+                        <li>40,075 km</li> 
+                        <li>53,825,760 yd</li>
+                        <li>1.21477e+8 ft</li>
+                    </ol>
+                    <label for="userAnswer">Enter Answer Here:</label>
+                    <input type="text" name="userAnswer3"></input>                    
+                    <button type="submit" id="submitAnswer">Add/Leave A Comment</button>
+                </form>
+                <h3>
+                    <%= `You entered ${urAnswer3}`%>
+                    <% if (urAnswer3 == 2) { %>
+                        <% score++; %>
+                        <%} %>       
+                </h3>
+            </li>
+            <li>
+                <h2>asdf</h2>
+                <form action="/my_trivia4/" method="post">
+                    <ol>
+                        <li>20,000 mi</li>
+                        <li>40,075 km</li> 
+                        <li>53,825,760 yd</li>
+                        <li>1.21477e+8 ft</li>
+                    </ol>
+                    <label for="userAnswer">Enter Answer Here:</label>
+                    <input type="text" name="userAnswer4"></input>                    
+                    <button type="submit" id="submitAnswer">Add/Leave A Comment</button>
+                </form>
+            </li>
+            <li>
+                <h2>What is the circumference of the Earth?</h2>
+                <form action="/my_trivia5/" method="post">
+                    <ol>
+                        <li>20,000 mi</li>
+                        <li>40,075 km</li> 
+                        <li>53,825,760 yd</li>
+                        <li>1.21477e+8 ft</li>
+                    </ol>
+                    <label for="userAnswer">Enter Answer Here:</label>
+                    <input type="text" name="userAnswer5"></input>                    
+                    <button type="submit" id="submitAnswer">Add/Leave A Comment</button>
+                </form>
+            </li> -->
+                    <form action="/my_trivia/" method="post">
+                    <li>
+                    <h2>If you have 5 apples in 3 buckets, how many buckets do you have?</h2>
+                    <ol>
+                        <li>2 bananas</li>
+                        <li>3 strawberries</li>
+                        <li>3 buckets</li>
+                        <li>5 apples</li>
+                    </ol>
+                    <label for="userAnswer1">Enter Answer Here:</label>
+                    <input type="text" name="userAnswer1"></input>
+                    <h3>
+                        <%= `You entered ${urAnswer1}`%>
+                            <% if (urAnswer1==3) { %>
+                                <% score++; %>
+                                    <%} %>
+                    </h3>
+                    </li>
+                    <li>
+                        <h2>What is the circumference of the Earth?</h2>
+                        <ol>
+                            <li>20,000 mi</li>
+                            <li>40,075 km</li>
+                            <li>53,825,760 yd</li>
+                            <li>1.21477e+8 ft</li>
+                        </ol>
+                        <label for="userAnswer2">Enter Answer Here:</label>
+                        <input type="text" name="userAnswer2"></input>
+                        <h3>
+                            <%= `You entered ${urAnswer2}`%>
+                                <% if (urAnswer2==2) { %>
+                                    <% score++; %>
+                                        <%} %>
+                        </h3>
+                    </li>
+                    <li>
+                        <h2>What is the circumference of the Earth?</h2>
+                        <ol>
+                            <li>20,000 mi</li>
+                            <li>40,075 km</li>
+                            <li>53,825,760 yd</li>
+                            <li>1.21477e+8 ft</li>
+                        </ol>
+                        <label for="userAnswer3">Enter Answer Here:</label>
+                        <input type="text" name="userAnswer3"></input>
+                        <h3>
+                            <%= `You entered ${urAnswer3}`%>
+                                <% if (urAnswer3==2) { %>
+                                    <% score++; %>
+                                        <%} %>
+                        </h3>
+                    </li>
+                    <li>
+                        <h2>asdf</h2>
+                        <ol>
+                            <li>20,000 mi</li>
+                            <li>40,075 km</li>
+                            <li>53,825,760 yd</li>
+                            <li>1.21477e+8 ft</li>
+                        </ol>
+                        <label for="userAnswer4">Enter Answer Here:</label>
+                        <input type="text" name="userAnswer4"></input>
+                        <h3>
+                            <%= `You entered ${urAnswer4}`%>
+                                <% if (urAnswer4==3) { %>
+                                    <% score++; %>
+                                        <%} %>
+                        </h3>
+                    </li>
+                    <li>
+                        <h2>What is the circumference of the Earth?</h2>
+                        <ol>
+                            <li>20,000 mi</li>
+                            <li>40,075 km</li>
+                            <li>53,825,760 yd</li>
+                            <li>1.21477e+8 ft</li>
+                        </ol>
+                        <label for="userAnswer5">Enter Answer Here:</label>
+                        <input type="text" name="userAnswer5"></input>
+                        <h3>
+                            <%= `You entered ${urAnswer5}`%>
+                                <% if (urAnswer5==3) { %>
+                                    <% score++; %>
+                                        <%} %>
+                        </h3>
+                    </li>
+                    <br>
+                    <button type="submit" id="submitAnswer">Submit Answer</button>
+                    </form>
+                </ol>
+                <div id="score">
+                    <h2>Your Score is: </h2>
+                    <%= score%>
+                </div>
 
-        </div>
-
-        </section>
+            </section>
 
     </main>
     <footer>
@@ -62,4 +227,5 @@
     </footer>
 
 </body>
+
 </html>

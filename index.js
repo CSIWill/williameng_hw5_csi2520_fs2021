@@ -1,5 +1,4 @@
 const express = require('express');
-// const mysql = require("mysql");
 const ejs = require('ejs');
 
 // Create express app
@@ -23,30 +22,34 @@ app.get('/my_resume', (req, res) => {
 });
 
 app.get('/my_fun_facts', (req, res) => {
-  res.render('./html/my_fun_facts');
+  res.render('./html/my_fun_facts.ejs');
 });
 
-app.get("/my_trivia", (req, res) => {
-  // let initialAnswers = [];
+app.get('/my_trivia', (req, res) => {
   let initialAnswers = 0;
-  let score = 0;
-  res.render('./html/my_trivia',{userAnswers: initialAnswers});
+  res.render('./html/my_trivia.ejs',{
+    urAnswer1: initialAnswers,
+    urAnswer2: initialAnswers,
+    urAnswer3: initialAnswers,
+    urAnswer4: initialAnswers,
+    urAnswer5: initialAnswers
+  });
 });
-// let userAnswers = [];
-// let userAnswerList = [];
-app.post('/my_trivia', (req,res) => {
-  // userAnswerList.push(req.body.userAnswer);
-  res.render('.html/my_trivia',{userAnswers: req.body.userAnswer})
-  // res.render('./html/my_trivia', {userAnswers: userAnswerList});
-  // res.send(`Your Answer: ${userAnswer}`);
-  // if (userAnswer.toUpperCase() == "D") {
-  //   res.send(`Your Answer: ${userAnswer}, Correct`);
-    // res.send('Correct');  
-  // }
-  // else {
 
-  //   res.render("./html/my_fun_facts");
-  // }
+
+app.post('/my_trivia', (req,res) => {
+  let newAnswer1 = req.body.userAnswer;
+  let newAnswer2 = req.body.userAnswer2;  
+  let newAnswer3 = req.body.userAnswer3;  
+  let newAnswer4 = req.body.userAnswer4;  
+  let newAnswer5 = req.body.userAnswer5;    
+  res.render('./html/my_trivia', {
+    urAnswer1: newAnswer1,
+    urAnswer2: newAnswer2,
+    urAnswer3: newAnswer3,
+    urAnswer4: newAnswer4,
+    urAnswer5: newAnswer5,
+  });
 });
 
 // Setup server ports
